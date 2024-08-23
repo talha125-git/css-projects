@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #87ceeb;
+}
+    .text-img{
+        text-align: center;
+        justify-content: center;
+        margin-top: 200px;
+        font-size: 200px;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        line-height: 200px;
+        background-image: url(pakistan\ flag.jpeg);
+        background-size: contain;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    /* flag animation css */
+   
+
+.flag-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.flagpole {
+    width: 10px;
+    height: 300px;
+    background-color: #8B4513;
+    margin-right: 20px;
+}
+
+.flag {
+    width: 180px;
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+    margin-left: -20px; 
+}
+
+.flag-content {
+    width: 180px;
+    height: 120px;
+    background-image: url(pakis.jpeg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    animation: wave 2s infinite ease-in-out;
+}
+
+@keyframes wave {
+    0% { transform: translateX(0) rotate(0); }
+    25% { transform: translateX(-10px) rotate(-2deg); }
+    50% { transform: translateX(0) rotate(0); }
+    75% { transform: translateX(10px) rotate(2deg); }
+    100% { transform: translateX(0) rotate(0); }
+}
+
+    
+</style>
+<body>
+    <div class="flag-container">
+        
+        <div class="flagpole"></div>
+        <div class="flag">
+            <div class="flag-content"></div>
+        </div>
+    </div>
+    <h1 class="text-img">PAKISTAN</h1>
+</body>
+</html>
